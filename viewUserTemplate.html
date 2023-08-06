@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rajshree PG - User List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #header {
+      background-color: #DCE8FB;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #logo {
+      width: 100px;
+      height: 50px;
+    }
+    #menu {
+      display: flex;
+    }
+    #menu li {
+      list-style: none;
+      margin-right: 20px;
+    }
+    #user-table {
+      width: 95%;
+      margin: 20px auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th, table td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    #edit-btn, #delete-btn {
+      text-decoration: none;
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 5px;
+    }
+    #edit-btn {
+      margin-right: 5px;
+    }
+    #submit-btn {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id='header'>
+    <a href='index.html'>
+      <img id='logo' src='https://lh3.googleusercontent.com/p/AF1QipO9Z__XiBbr0aU8JhkoeQBIPBeG6wV203SMvA-F=w1080-h608-p-no-v0' alt='Rajshree PG Logo'>
+    </a>
+    <ul id='menu'>
+      <li><a href='index.html'>Home</a></li>
+      <li><a href='/com/rajshree/hostel/AddUserForm'>Add Users</a></li>
+      <li><a href='/com/rajshree/hostel/ViewUser'>View all</a></li>
+      <li><a href='/com/rajshree/hostel/logout'>Logout</a></li>
+    </ul>
+  </div>
+  <div id='user-table'>
+    <h1>User List</h1>
+    <table>
+      <tr>
+        <th>Room ID</th>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Father's Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Alternate Number</th>
+        <th>Aadhar Card Number</th>
+        <th>Register Date</th>
+        <th>Note</th>
+        <th>Blacklisted</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+      <!-- Sample data - Replace this section with dynamic data from the server -->
+      <tr>
+        <td>101</td>
+        <td>John Doe</td>
+        <td>Male</td>
+        <td>Michael Doe</td>
+        <td>123 Main St</td>
+        <td>9876543210</td>
+        <td>8765432109</td>
+        <td>1234 5678 9012</td>
+        <td>2023-08-06</td>
+        <td>Lorem ipsum dolor sit amet...</td>
+        <td>No</td>
+        <td><a id='edit-btn' href='/rajshreepg/editUser?code=101'>Edit</a></td>
+        <td><a id='delete-btn' href='/rajshreepg/confirmDeleteUser?code=101'>Delete</a></td>
+      </tr>
+      <tr>
+        <td>102</td>
+        <td>Jane Smith</td>
+        <td>Female</td>
+        <td>Michael Smith</td>
+        <td>456 Oak St</td>
+        <td>9876543222</td>
+        <td>8765432111</td>
+        <td>5678 9012 3456</td>
+        <td>2023-08-05</td>
+        <td>Lorem ipsum dolor sit amet...</td>
+        <td>Yes</td>
+        <td><a id='edit-btn' href='/rajshreepg/editUser?code=102'>Edit</a></td>
+        <td><a id='delete-btn' href='/rajshreepg/confirmDeleteUser?code=102'>Delete</a></td>
+      </tr>
+      <!-- End of sample data -->
+    </table>
+  </div>
+</body>
+</html>
